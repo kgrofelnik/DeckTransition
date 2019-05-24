@@ -65,7 +65,7 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
         self.dismissAnimation = dismissAnimation
         self.dismissCompletion = dismissCompletion
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateForStatusBar), name: UIApplication.didChangeStatusBarFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateForStatusBar), name: NSNotification.Name.UIApplicationDidChangeStatusBarFrame, object: nil)
     }
 
     // MARK: - Public methods
